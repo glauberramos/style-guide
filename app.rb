@@ -1,0 +1,24 @@
+require 'sinatra'
+require 'sinatra/content_for'
+require 'sinatra/reloader'
+require 'slim'
+require 'sass'
+require 'compass'
+
+get '/' do
+    slim :index
+end
+
+configure do
+  Compass.configuration do |config|
+    config.project_path = File.dirname(__FILE__)
+    config.sass_dir = 'views/stylesheets'
+  end
+
+  set :scss, Compass.sass_engine_options
+end
+
+get '/screen.css' do
+	content_type 'text/css', :charset => 'utf-8'
+    scss :'stylesheets/screen'
+end
