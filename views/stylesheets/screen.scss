@@ -8,16 +8,35 @@ body {
 	margin: 0 auto;
 }
 
+#colors {
+	figure {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		background: white;
+		display: block;
+		float: left;
+	}
+
+	h2 {
+		clear: both;
+	}
+}
+
+#typography {
+	clear: both;
+
+	em, strong, small {
+		display: block;
+	}
+}
+
 #forms {
 	input, select {
 		display: block;
 	}
 }
 
-#typography {
-	em, strong, small {
-		display: block;
-	}
-}
+
 
 //style guide styling
