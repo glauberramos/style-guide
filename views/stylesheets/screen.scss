@@ -1,3 +1,23 @@
+//page styling
 body {
 	background: #EFEFEF;
 }
+
+#styleguide {
+	width: 60%;
+	margin: 0 auto;
+}
+
+#forms {
+	input, select {
+		display: block;
+	}
+}
+
+#typography {
+	em, strong, small {
+		display: block;
+	}
+}
+
+//style guide styling
