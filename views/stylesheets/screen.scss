@@ -35,6 +35,21 @@ body {
 	input, select {
 		display: block;
 	}
+
+	fieldset {
+		border: 0;
+	}
+
+	label {
+		float: left;
+		display: block;
+	}
+
+	.checkboxes, .radios {
+		input, select {
+			float: left;
+		}
+	}
 }
 
 
