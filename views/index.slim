@@ -8,106 +8,168 @@ html[lang="en"]
 		link[rel="stylesheet" href="screen.css"]
 		link[rel="stylesheet" href="normalize.css"]
 	body
-		#styleguide
-		  article id="colors"
-		    h1 Color Palette
-		    .color-palette
-		      h2 Main colors
-		      figure
-		      figure
-		      figure
-		      h2 Background Colors
-		      figure
-		      figure
-		      figure
-		      h2 Message Colors
-		      figure
-		      figure
-		      figure
-		  article id="typography"
-		    h1 Typography
-		    .headers
-		  	  h1 Header 1
-		  	  h2 Header 2
-		  	  h3 Header 3
-		  	  h4 Header 4
-		  	  h5 Header 5
-		    p Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph
-		    em Emphasized text Emphasized text Emphasized text 
-		    strong Strong text Strong text Strong text Strong text 
-		    small Small text Small text Small text Small text Small 
-		  article id="icons"
-		  	h1 Icons
-		  article id="buttons"
-		    h1 Buttons
-		    a href="javascript:void(0)" Anchor Tag
-		    button Button Tag
-		    input type="submit" value="Submit Input"
-		  article id="forms"
-			h1 Forms
-			input placeholder="Text Input" type="text"
-				input placeholder="Email Input" type="email"
-				input placeholder="Password Input" type="password"
-				input placeholder="Number Input" type="number"
-				input placeholder="Search Input" type="search"
-				textarea placeholder="Textarea."
-				select
-					option An Option
-					option An Option
-					option An Option
-					option An Option
-			.checkboxes
-			  fieldset
-			    input type="checkbox"
-			    label A Checkbox
-			  fieldset
-			    input checked="checked" type="checkbox"
-			    label A Checked Checkbox
-			.radios
-			  fieldset
-			    input checked="checked" name="radiogroup" type="radio"
-			    label A Checked Radio
-			  fieldset
-			    input name="radiogroup" type="radio"
-			    label A Radio
-			input type="submit" value="Submit Input"
-		  article id="lists"
-		    h1 Lists
-		    h2 Unordered List
-			ul
-			  li List item 1
-			  li List item 1
-			  li List item 1
-			  li List item 1
-			  li List item 1
-		    h2 Ordered List
-			ol
-				li List item 1
-				li List item 1
-				li List item 1
-				li List item 1
-				li List item 1
-		  article id="tables"
-		    h1 Tables
-		    table
-		  	  tbody
-		  	    tr
-			      th Table Header
-			      th Table Header
-			      th Table Header
-			      th Table Header
-			    tr
-			      td Table Data
-			      td Table Data
-			      td Table Data
-			      td Table Data
-			    tr
-			      td Table Data
-			      td Table Data
-			      td Table Data
-			      td Table Data
-			    tr
-			      td Table Data
-			      td Table Data
-			      td Table Data
-			      td Table Data
+    #styleguide
+      article id="colors"
+        h1 Color Palette
+        .color-palette
+          h2 Main colors
+          ul
+            li
+              span style="background: #003F5E"
+              p
+                | Text
+            li
+              span style="background: #501D3D"
+              p
+                | Hightlights
+          h2 Background Colors
+          ul
+            li
+              span style="background: #EEE"
+              p
+                | Body
+            li
+              span style="background: #FFF; border: 1px solid #DDD"
+              p
+                | Content
+          h2 Message Colors
+          ul
+            li
+              span style="background: #EB6E1F"
+              p
+                | Alert
+            li
+              span style="background: #C41230"
+              p
+                | Error
+            li
+              span style="background: #9FA615"
+              p
+                | Success
+            li
+              span style="background: #007FFF"
+              p
+                | Links
+
+      article id="typography"
+        h1 Typography
+        .fonts
+          ul
+            li
+              a href="http://www.google.com/webfonts/specimen/Open+Sans" target="blank_"
+                | Open Sans
+              | , the default
+            li
+              | Arial, the alternate
+
+        .headers
+          h1 Header 1
+          h2 Header 2
+          h3 Header 3
+          h4 Header 4
+          h5 Header 5
+
+        p Paragraph Paragraph Paragraph Paragraph Paragraph Paragraph
+        em Emphasized text Emphasized text Emphasized text 
+        strong Strong text Strong text Strong text Strong text 
+        small Small text Small text Small text Small text Small 
+
+      article id="icons"
+        h1 Icons
+
+      article id="buttons"
+        h1 Buttons
+        h2 Links
+        ul
+          li
+            a href="javascript:void(0)" Anchor Tag
+          li
+            a href="javascript:void(0)" class="visited" Anchor Tag Visited
+        br
+        h2 Buttons
+        h3 @include button
+        h4 Buttons default to this style when no argument for colors have been given:
+        ul
+          li
+            button Button Tag
+          li
+            input type="submit" value="Submit Input"
+
+        h4 Buttons default to this style when no argument for colors have been given:
+        ul.green_btns
+          li
+            button Button Tag
+          li
+            input type="submit" value="Submit Input"
+        br
+        h2 Tabs
+
+      article id="forms"
+        h1 Forms
+        input placeholder="Text Input" type="text"
+          input placeholder="Email Input" type="email"
+          input placeholder="Password Input" type="password"
+          input placeholder="Number Input" type="number"
+          input placeholder="Search Input" type="search"
+          textarea placeholder="Textarea."
+          select
+            option An Option
+            option An Option
+            option An Option
+            option An Option
+        .checkboxes
+          fieldset
+            input type="checkbox"
+            label A Checkbox
+          fieldset
+            input checked="checked" type="checkbox"
+            label A Checked Checkbox
+        .radios
+          fieldset
+            input checked="checked" name="radiogroup" type="radio"
+            label A Checked Radio
+          fieldset
+            input name="radiogroup" type="radio"
+            label A Radio
+        input type="submit" value="Submit Input"
+
+      article id="lists"
+        h1 Lists
+        h2 Unordered List
+        ul
+          li List item 1
+          li List item 1
+          li List item 1
+          li List item 1
+          li List item 1
+          h2 Ordered List
+        ol
+          li List item 1
+          li List item 1
+          li List item 1
+          li List item 1
+          li List item 1
+        article id="tables"
+          h1 Tables
+          table
+            tbody
+              tr
+              th Table Header
+              th Table Header
+              th Table Header
+              th Table Header
+            tr
+              td Table Data
+              td Table Data
+              td Table Data
+              td Table Data
+            tr
+              td Table Data
+              td Table Data
+              td Table Data
+              td Table Data
+            tr
+              td Table Data
+              td Table Data
+              td Table Data
+              td Table Data

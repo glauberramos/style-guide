@@ -1,34 +1,141 @@
+@import "compass/css3";
+
+// Colors
+$link: #007FFF;
+$purple: #800080;
+$text: #003F5E;
+$success: #A1D030;
+
+// Mixins
+
+@mixin button($bgcolor: #DDD, $bgcolor2: #FFF, $color: $text) {
+  @include border-radius(3px); 
+  background-color: $bgcolor;
+  @include background(linear-gradient(top, $bgcolor2, $bgcolor));
+  border: $bgcolor 1px solid;
+  padding: 5px 20px;
+  color: $color;
+  &:hover {
+    @include background(linear-gradient(bottom, $bgcolor2, $bgcolor));
+  }
+}
+
+
 //page styling
 body {
-	background: #EFEFEF;
+	background: #EEE;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #003F5E;
+
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 #styleguide {
 	width: 60%;
-	margin: 0 auto;
+	margin: 20px auto;
+  background: #FFF;
+  padding: 20px;
+  @include border-radius(5);
 }
 
-#colors {
-	figure {
-		width: 100px;
-		height: 100px;
-		border-radius: 50%;
-		background: white;
-		display: block;
-		float: left;
-	}
+a {
+  color: $link;
+  &:hover {
+    color: darken($link, 10%);
+  }
+  &:visited, &.visited {
+    color: $purple;
+  }
+}
 
-	h2 {
-		clear: both;
-	}
+h1, h2, h3, h4, h5 {
+    color: #501D3D;
+    clear: both;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.67em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+
+  h4 {
+    font-size: 1.33em;
+  }
+  h5 {
+    font-size: 1.17em;
+  }
+
+#colors {
+  ul {
+    overflow: hidden;
+    li {
+      float: left;
+      list-style: none;
+      margin-right: 20px;
+      p {
+        clear: both;
+        text-align: center;
+        padding: 5px;
+        font-size: 12px;
+        color: #999
+      }
+      span {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: white;
+        display: block;
+        float: left;
+      }
+    }
+    h2 {
+      clear: both;
+    }
+  }
 }
 
 #typography {
 	clear: both;
 
+  .fonts {
+    li { 
+      display: bock;
+      float: none;
+    }
+  }
 	em, strong, small {
 		display: block;
 	}
+
+  p {
+    margin: 0 0 10px 0;
+  }
+}
+
+#buttons {
+  display: block;
+  overflow: hidden;
+  li {
+    float: left;
+    margin: 10px;
+  }
+  button, input[type="submit"] {
+    @include button;
+  }
+  ul.green_btns {
+    button, input[type="submit"] {
+      @include button(darken($success, 8%), $success, white);
+    }   
+  }
 }
 
 #forms {
