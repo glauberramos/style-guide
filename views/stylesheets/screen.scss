@@ -51,6 +51,22 @@ hr {
   @include border-radius(5);
 }
 
+header {
+  background-color: $highlight;
+  h1 {
+    color: #FFF;
+    margin: 0;
+    padding: 10px
+  }
+}
+
+article {
+  padding: 10px;
+  width: 80%;
+  margin: 20px auto;
+  border: 1px solid #EEE;
+}
+
 a {
   color: $link;
   &:hover {
@@ -61,27 +77,38 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, h6 {
     color: $highlight;
     clear: both;
+    margin: 0;
   }
   h1 {
     font-size: 2em;
+    margin: 10px 0 20px 0;
   }
   h2 {
     font-size: 1.67em;
     color: lighten($highlight, 15%);
+    margin: 0 0 20px 0;
   }
   h3 {
     font-size: 1.5em;
+    margin: 0 0 20px 0;
   }
 
   h4 {
     font-size: 1.33em;
     color: lighten($highlight, 15%);
+    margin: 0 0 20px 0;
   }
   h5 {
     font-size: 1.17em;
+    margin: 0 0 20px 0;
+  }
+  h6 {
+    font-size: 1.13em;
+    margin: 0 0 20px 0;
+    color: lighten($highlight, 15%);
   }
 
 #colors {
@@ -131,33 +158,16 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-#buttons {
-  display: block;
-  overflow: hidden;
-  li {
-    display: inline-block;
-    margin: 10px;
-  }
-  h3 span {
-    display: inline-block;
-    font-size: 0.7em;
-    font-weight: normal;
-    color: $text;
-    font-style: italic;
-  }
-  button, input[type="submit"] {
-    @include button;
-  }
-  ul.green_btns {
-    button, input[type="submit"] {
-      @include button($success, darken($success, 8%), white);
-    }   
-  }
-}
-
 #forms {
-	input, select {
+	input, select, textarea, ul.select {
+    color: $text;
 		display: block;
+    padding: 8px 12px;
+    margin: 20px;
+    font-size: 1.3em;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    @include box-shadow(2px 2px 5px #F7f7f7 inset, 1px 1px 1px white)
 	}
 
 	fieldset {
@@ -174,8 +184,51 @@ h1, h2, h3, h4, h5 {
 			float: left;
 		}
 	}
+
+  ul.select { 
+    padding: 0;
+    li {
+      text-align: left;
+      padding: 10px;
+      color: $link;
+      border: 2px solid transparent;
+      &:nth-child(even) {
+        background-color: #F1F1F1;
+      }
+      &:hover {
+        background-color: lighten($link, 40%);
+        cursor: pointer;
+        border-color: lighten($link, 20%);
+      }
+      &.selected {
+        background-color: $link;
+        border-color: transparent;
+      }
+    }
+  }
 }
 
-
+#buttons {
+  display: block;
+  overflow: hidden;
+  li {
+    display: inline-block;
+    margin: 10px;
+  }
+  h3 span {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: normal;
+    color: $text;
+  }
+  button, input[type="submit"] {
+    @include button;
+  }
+  ul.green_btns {
+    button, input[type="submit"] {
+      @include button($success, darken($success, 8%), white);
+    }   
+  }
+}
 
 //style guide styling
