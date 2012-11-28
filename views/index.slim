@@ -18,38 +18,54 @@ html[lang="en"]
               span style="background: #003F5E"
               p
                 | Text
+                br
+                | #003F5E
             li
               span style="background: #501D3D"
               p
-                | Hightlights
+                | Hightlights 
+                br
+                | #501D3D
           h2 Background Colors
           ul
             li
               span style="background: #EEE"
               p
                 | Body
+                br
+                | #EEE
             li
-              span style="background: #FFF; border: 1px solid #DDD"
+              span style="background: #F9F9F9; border: 1px solid #DDD"
               p
                 | Content
+                br
+                | #F9F9F9
           h2 Message Colors
           ul
             li
               span style="background: #EB6E1F"
               p
                 | Alert
+                br
+                | #EB6E1F
             li
               span style="background: #C41230"
               p
                 | Error
+                br
+                | #C41230
             li
-              span style="background: #9FA615"
+              span style="background: #A1D030"
               p
                 | Success
+                br
+                | #A1D030
             li
               span style="background: #007FFF"
               p
                 | Links
+                br
+                | #007FFF
 
       article id="typography"
         h1 Typography
@@ -87,15 +103,21 @@ html[lang="en"]
             a href="javascript:void(0)" class="visited" Anchor Tag Visited
         br
         h2 Buttons
-        h3 @include button
-        h4 Buttons default to this style when no argument for colors have been given:
+        h3 
+          | @include button($tcolor, $bcolor, $font)
+          span
+            | ($tcolor = top color, $bcolor = bottom color, $font = font color)
+        p Buttons default to this style when no argument for colors have been given:
         ul
           li
             button Button Tag
           li
             input type="submit" value="Submit Input"
 
-        h4 Buttons default to this style when no argument for colors have been given:
+        p 
+          | Example of buttons with arguments defined:
+          br 
+          | @include button(#A1D030, #88AF28, white);
         ul.green_btns
           li
             button Button Tag
