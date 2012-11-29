@@ -6,4 +6,4 @@ gem 'sass'
 gem 'sinatra'
 gem 'sinatra-contrib'
 
-require 'compass'
+gem "compass"
