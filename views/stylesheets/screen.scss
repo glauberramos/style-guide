@@ -37,10 +37,17 @@ i {
   padding: 0.2em;
 }
 
-ul, li {
-  list-style: none;
+ul, ol, li {
   margin: 0;
   padding: 0;
+}
+
+ol {
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
 }
 
 hr {
