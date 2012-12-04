@@ -252,4 +252,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-//style guide styling
+table {
+  display: inline-block;
+  th, td {
+    padding: 10px 20px;
+    border: 1px solid #DDD;
+   }
+   thead {
+   border-bottom: 2px solid #DDD;
+   background: #F1F1F1;
+   }
+ }
