@@ -17,7 +17,8 @@ $highlight: #501D3D;
   padding: 5px 20px;
   color: $font;
   &:hover {
-    @include background(linear-gradient(bottom, $tcolor, $bcolor));
+    background: lighten($bcolor, 2%);
+    border-color: darken($bcolor, 5%);
   }
 }
 
@@ -196,9 +197,9 @@ h1, h2, h3, h4, h5, h6 {
         background-color: #F1F1F1;
       }
       &:hover {
-        background-color: lighten($link, 40%);
+        background-color: $link;
+        color: white;
         cursor: pointer;
-        border-color: lighten($link, 20%);
       }
       &.selected {
         background-color: $link;
