@@ -28,6 +28,7 @@ $highlight: #501D3D;
   border: $font 1px solid;
   padding: 5px 20px;
   color: $font;
+  cursor: default;
 }
 
 //page styling
@@ -168,17 +169,31 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
 
   .fonts {
+
     li { 
       display: bock;
       float: none;
     }
   }
+
 	em, strong, small {
 		display: block;
 	}
 
   p {
     margin: 0 0 10px 0;
+  }
+
+  .title {
+    font-weight: 700;
+  }
+
+  .body {
+    font-weight: 400;
+  }
+
+  .small {
+    font-weight: 100;
   }
 }
 
@@ -269,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 
   ul.green_btns {
     button.disabled, input[type="submit"].disabled {
-      @include disabled_button(darken($success, 15%), darken($success, 10%));
+      @include disabled_button(darken($success, 12%), darken($success, 8%));
     }   
   }
 }
