@@ -22,6 +22,13 @@ $highlight: #501D3D;
   }
 }
 
+@mixin disabled_button($bcolor: #EEE, $font: #DDD) {
+  @include border-radius(3px); 
+  background: $bcolor;
+  border: $font 1px solid;
+  padding: 5px 20px;
+  color: $font;
+}
 
 //page styling
 body {
@@ -249,9 +256,20 @@ h1, h2, h3, h4, h5, h6 {
   button, input[type="submit"] {
     @include button;
   }
+
+  button.disabled, input[type="submit"].disabled {
+    @include disabled_button;
+  }
+
   ul.green_btns {
     button, input[type="submit"] {
       @include button($success, darken($success, 8%), white);
+    }   
+  }
+
+  ul.green_btns {
+    button.disabled, input[type="submit"].disabled {
+      @include disabled_button(darken($success, 15%), darken($success, 10%));
     }   
   }
 }
