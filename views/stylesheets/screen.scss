@@ -16,15 +16,16 @@ $highlight: #501D3D;
   border: $bcolor 1px solid;
   padding: 5px 20px;
   color: $font;
+  text-decoration: none;
   &:hover {
     background: lighten($bcolor, 2%);
     border-color: darken($bcolor, 5%);
   }
 }
 
-@mixin disabled_button($bcolor: #EEE, $font: #DDD) {
+@mixin disabled_button($background: #EEE, $font: #DDD) {
   @include border-radius(3px); 
-  background: $bcolor;
+  background: $background;
   border: $font 1px solid;
   padding: 5px 20px;
   color: $font;
@@ -258,32 +259,39 @@ h1, h2, h3, h4, h5, h6 {
 #buttons {
   display: block;
   overflow: hidden;
+
   li {
     display: inline-block;
     margin: 10px;
   }
+
   h3 span {
     display: inline-block;
     font-size: 0.7em;
     font-weight: normal;
     color: $text;
   }
-  button, input[type="submit"] {
+
+  .button i {
+    font-size: 1.3em;
+  }
+
+  .button, button, input[type="submit"] {
     @include button;
   }
 
-  button.disabled, input[type="submit"].disabled {
+  .button.disabled, button.disabled, input[type="submit"].disabled {
     @include disabled_button;
   }
 
   ul.green_btns {
-    button, input[type="submit"] {
+    .button, button, input[type="submit"] {
       @include button($success, darken($success, 8%), white);
     }   
   }
 
   ul.green_btns {
-    button.disabled, input[type="submit"].disabled {
+    .button.disabled, button.disabled, input[type="submit"].disabled {
       @include disabled_button(darken($success, 12%), darken($success, 8%));
     }   
   }
