@@ -30,6 +30,14 @@ $highlight: #501D3D;
     padding: 0;
     line-height: .5em;
   }
+  &.big {
+    i {
+      display: block;
+      font-size: 50px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+  }
   &.disabled {
     background: #EEE;
     border: #CCC 1px solid;
