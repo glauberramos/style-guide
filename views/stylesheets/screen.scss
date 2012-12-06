@@ -102,10 +102,10 @@ article {
 a {
   color: $link;
   &:hover {
-    color: darken($link, 10%);
+    color: lighten($link, 10%);
   }
   &:visited, &.visited {
-    color: $purple;
+    color: darken($link, 10%);
   }
 }
 
