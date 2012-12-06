@@ -112,7 +112,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
     color: $highlight;
     clear: both;
-    margin: 0;
+    margin: 10px 0;
   }
   h1 {
     font-size: 2em;
@@ -121,25 +121,20 @@ h1, h2, h3, h4, h5, h6 {
   h2 {
     font-size: 1.67em;
     color: lighten($highlight, 15%);
-    margin: 0 0 20px 0;
   }
   h3 {
     font-size: 1.5em;
-    margin: 0 0 20px 0;
   }
 
   h4 {
     font-size: 1.33em;
     color: lighten($highlight, 15%);
-    margin: 0 0 20px 0;
   }
   h5 {
     font-size: 1.17em;
-    margin: 0 0 20px 0;
   }
   h6 {
     font-size: 1.13em;
-    margin: 0 0 20px 0;
     color: lighten($highlight, 15%);
   }
 
@@ -206,6 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #forms {
 	input, select, textarea, ul.select {
+    width: 80%;
     color: $text;
 		display: block;
     padding: 8px 12px;
@@ -231,11 +227,13 @@ h1, h2, h3, h4, h5, h6 {
   }
   input[type="submit"] {
     @include button();
+    width: auto;
   }
 
 	.checkboxes, .radios {
 		input, select {
 			float: left;
+      width: auto;
 		}
 	}
 
