@@ -14,22 +14,28 @@ $highlight: #501D3D;
   background-color: $bcolor;
   @include background(linear-gradient(top, $tcolor, $bcolor));
   border: $bcolor 1px solid;
-  padding: 5px 20px;
+  padding: 8px 20px;
+  display: inline-block;
+  line-height: 1em;
   color: $font;
+  cursor: pointer;
   text-decoration: none;
   &:hover {
     background: lighten($bcolor, 2%);
     border-color: darken($bcolor, 5%);
   }
-}
-
-@mixin disabled_button($background: #EEE, $font: #DDD) {
-  @include border-radius(3px); 
-  background: $background;
-  border: $font 1px solid;
-  padding: 5px 20px;
-  color: $font;
-  cursor: default;
+  i {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    line-height: .5em;
+  }
+  &.disabled {
+    background: #EEE;
+    border: #CCC 1px solid;
+    color: #CCC;
+    cursor: default;
+  }
 }
 
 //page styling
@@ -272,16 +278,8 @@ h1, h2, h3, h4, h5, h6 {
     color: $text;
   }
 
-  .button i {
-    font-size: 1.3em;
-  }
-
   .button, button, input[type="submit"] {
     @include button;
-  }
-
-  .button.disabled, button.disabled, input[type="submit"].disabled {
-    @include disabled_button;
   }
 
   ul.green_btns {
@@ -289,40 +287,28 @@ h1, h2, h3, h4, h5, h6 {
       @include button($success, darken($success, 8%), white);
     }   
   }
-
-  ul.green_btns {
-    .button.disabled, button.disabled, input[type="submit"].disabled {
-      @include disabled_button(darken($success, 12%), darken($success, 8%));
-    }   
-  }
 }
 
 #tables {
-  th, td {
-    padding: 5px 10px;
-  }
-
-  tr {
-    border: 1px solid #eee;
-  }
-
-  tr:nth-child(even) {
-    background: #f9f9f9
-  }
-  
-  tr:nth-child(odd) {
-    background: #EFF6FA
+  table {
+    display: inline-block;
+    th, td {
+      padding: 10px 20px;
+      border: 1px solid #DDD;
+     }
+    tr {
+      border: 1px solid #eee;
+    }
+    tr:nth-child(even) {
+      background: #EFF6FA
+    }
+    tr:nth-child(odd) {
+      background: #F9F9F9
+    }
+    thead th {
+      border-bottom: 2px solid #DDD;
+      background: #EEE;
+    }
   }
 }
 
-table {
-  display: inline-block;
-  th, td {
-    padding: 10px 20px;
-    border: 1px solid #DDD;
-   }
-   thead {
-   border-bottom: 2px solid #DDD;
-   background: #F1F1F1;
-   }
- }
