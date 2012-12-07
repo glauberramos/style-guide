@@ -9,6 +9,10 @@ get '/' do
     slim :index
 end
 
+get '/icons' do
+    slim :icons_sample
+end
+
 configure do
   Compass.configuration do |config|
     config.project_path = File.dirname(__FILE__)
