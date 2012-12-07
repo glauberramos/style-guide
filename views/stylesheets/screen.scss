@@ -62,6 +62,9 @@ table {
 i {
   font-size: 4em;
   padding: 0.2em;
+  &.link {
+    font-size: 0.7em
+  }
 }
 
 ul, ol, li {
@@ -109,8 +112,10 @@ article {
 
 a {
   color: $link;
+  text-decoration: none;
   &:hover {
     color: lighten($link, 10%);
+    text-decoration: underline;
   }
   &:visited, &.visited {
     color: darken($link, 10%);
