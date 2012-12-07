@@ -63,7 +63,10 @@ i {
   font-size: 4em;
   padding: 0.2em;
   &.link {
-    font-size: 0.7em
+    font-size: 0.7em;
+  }
+  &.small {
+    font-size: 1.2em;
   }
 }
 
@@ -208,31 +211,37 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .small {
-    font-weight: 100;
+    font-weight: 300;
   }
 }
 
-#forms {
-	input, select, textarea, ul.select {
-    width: 80%;
+form {
+  input, select, textarea, ul.select {
+    min-width: 80%;
     color: $text;
-		display: block;
-    padding: 8px 12px;
-    margin: 20px;
-    font-size: 1.3em;
+    display: block;
+    padding: 5px 10px;
+    margin: 0;
     background-color: #FFF;
     border: 1px solid #DDD;
-    @include box-shadow(2px 2px 5px #F7f7f7 inset, 1px 1px 1px white)
-	}
+  }
 
-	fieldset {
-		border: 0;
-	}
+  fieldset {
+    border: 1px solid #EEE;
+    display: inline-block;
 
-	label {
-		float: left;
-		display: block;
-	}
+    legend {
+      text-align: left;
+      padding: 0 10px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+  }
+
+  label {
+    display: block;
+    text-align: left
+  }
 
   input[type="checkbox"], input[type="radio"] {
     padding: 0;
@@ -240,35 +249,38 @@ h1, h2, h3, h4, h5, h6 {
   }
   input[type="submit"] {
     @include button();
-    width: auto;
+    margin-top: 30px;
+    display: inline-block;
+    min-width: 0;
+    float: right;
   }
 
-	.checkboxes, .radios {
-		input, select {
-			float: left;
+  .checkboxes, .radios {
+    input, select {
+      float: left;
       width: auto;
-		}
-	}
+    }
+  }
+}
 
-  ul.select { 
-    padding: 0;
-    li {
-      text-align: left;
-      padding: 10px;
-      color: $link;
-      border: 2px solid transparent;
-      &:nth-child(even) {
-        background-color: #F1F1F1;
-      }
-      &:hover {
-        background-color: $link;
-        color: white;
-        cursor: pointer;
-      }
-      &.selected {
-        background-color: $link;
-        border-color: transparent;
-      }
+ul.select { 
+  padding: 0;
+  li {
+    text-align: left;
+    padding: 10px;
+    color: $link;
+    border: 2px solid transparent;
+    &:nth-child(even) {
+      background-color: #F1F1F1;
+    }
+    &:hover {
+      background-color: $link;
+      color: white;
+      cursor: pointer;
+    }
+    &.selected {
+      background-color: $link;
+      border-color: transparent;
     }
   }
 }
@@ -323,3 +335,26 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+#usage {
+  form {
+    p {
+      padding: 0 40px;
+    }
+    label {
+      margin-top: 3%;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 94%;
+      margin-top: 3%;
+    }
+
+    input[type="submit"] {
+      @include button($success, darken($success, 8%), white);
+    }
+
+    fieldset {
+      width: 80%;
+    }
+  }
+}
