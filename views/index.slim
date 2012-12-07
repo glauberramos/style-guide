@@ -5,8 +5,8 @@ html[lang="en"]
 		meta[charset="utf-8"]
 		meta[name="viewport" content="width=device-width"]
 		
-		link[rel="stylesheet" href="screen.css"]
 		link[rel="stylesheet" href="normalize.css"]
+		link[rel="stylesheet" href="screen.css"]
     link[rel="stylesheet" href="font-awesome.css"]
 	body
     #styleguide
@@ -214,43 +214,52 @@ html[lang="en"]
 
       article id="forms"
         h1 Forms
-        input placeholder="Text Input" type="text"
-        input placeholder="Email Input" type="email"
-        input placeholder="Password Input" type="password"
-        input placeholder="Number Input" type="number"
-        input placeholder="Search Input" type="search"
-        textarea placeholder="Textarea."
-        select
-          option An Option
-          option An Option
-          option An Option
-          option An Option
-        ul.select
-          li An Option
-          li An Option
-          li An Option
-          li An Option
-          li An Option
-          li An Option
-          li An Option
-          li An Option
-          li An Option
-        br
-        .checkboxes
-          fieldset
-            input type="checkbox"
-            label A Checkbox
-          fieldset
-            input checked="checked" type="checkbox"
-            label A Checked Checkbox
-        .radios
-          fieldset
-            input checked="checked" name="radiogroup" type="radio"
-            label A Checked Radio
-          fieldset
-            input name="radiogroup" type="radio"
-            label A Radio
-        input type="submit" value="Submit Input"
+        form
+          p
+            input placeholder="Text Input" type="text"
+          p
+            input placeholder="Email Input" type="email"
+          p
+            input placeholder="Password Input" type="password"
+          p
+            input placeholder="Number Input" type="number"
+          p
+            input placeholder="Search Input" type="search"
+          p
+            textarea placeholder="Textarea."
+          p  
+            select
+              option An Option
+              option An Option
+              option An Option
+              option An Option
+          p
+            ul.select
+              li An Option
+              li An Option
+              li An Option
+              li An Option
+              li An Option
+              li An Option
+              li An Option
+              li An Option
+              li An Option
+          br
+          .checkboxes
+            p
+              input type="checkbox"
+              label A Checkbox
+            p
+              input checked="checked" type="checkbox"
+              label A Checked Checkbox
+          .radios
+            p
+              input checked="checked" name="radiogroup" type="radio"
+              label A Checked Radio
+            p
+              input name="radiogroup" type="radio"
+              label A Radio
+          input type="submit" value="Submit Input"
 
       article id="lists"
         h1 Lists
@@ -293,3 +302,21 @@ html[lang="en"]
               td Table Data
               td Table Data
               td Table Data
+
+      article id="usage"
+        h1 Usage Examples
+        form
+          fieldset
+            legend 
+              i.icon-lock.small
+              | Login
+            p
+              label
+                | Username:
+              input type="text" placeholder="Enter your username"
+              label
+                | Password:
+              input type="password" placeholder="Enter your password"
+              input type="submit" value="Log In"
+
+
