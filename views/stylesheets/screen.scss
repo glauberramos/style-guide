@@ -397,7 +397,7 @@ ul.select {
       margin: 0
     }
     &.selected {
-      background: lighten($link, 20%);
+      background: lighten($link, 10%);
       border-color: $link;
       .row {
         background: $link;
