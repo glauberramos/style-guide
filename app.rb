@@ -13,6 +13,10 @@ get '/icons' do
     slim :icons_sample
 end
 
+get '/merge' do
+    slim :merge_sample
+end
+
 configure do
   Compass.configuration do |config|
     config.project_path = File.dirname(__FILE__)

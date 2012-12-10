@@ -1,0 +1,63 @@
+doctype html
+html[lang="en"]
+	head
+		title Style Guide
+		meta[charset="utf-8"]
+		meta[name="viewport" content="width=device-width"]
+		link[rel="stylesheet" href="normalize.css"]
+    link[rel="stylesheet" href="font-awesome.css"]
+		link[rel="stylesheet" href="screen.css"]
+	body
+    
+    #styleguide.merge
+      h2
+        | Are these duplicate records for the same person?
+        em 
+          | Select a patient and the other will be merged into the one you choose
+
+      div.patient
+        div.row
+          h3
+            | Name
+          div
+            | Alexandre Areias
+        div.row
+          h3
+            | Demographics
+          div
+            span
+              | Male, 
+            span
+              | 42 years old, 
+            span
+              | Born on 02/Jan/1998
+        div.row
+          h3
+            | Identifiers
+          div
+            | TT823R
+
+      div.arrows
+        i.icon-arrow-right
+
+      div.patient.selected
+        div.row
+          h3
+            | Name
+          div
+            | Alexandre Areias
+        div.row
+          h3
+            | Demographics
+          div
+            span
+              | Male, 
+            span
+              | 42 years old, 
+            span
+              | Born on 02/Jan/1998
+        div.row
+          h3
+            | Identifiers
+          div
+            | TT823R

@@ -139,9 +139,15 @@ h1, h2, h3, h4, h5, h6 {
   h2 {
     font-size: 1.67em;
     color: lighten($highlight, 15%);
+    em {
+      font-size: 0.7em;
+      color: lighten($highlight, 30%);
+      display: block;
+    }
   }
   h3 {
     font-size: 1.5em;
+
   }
 
   h4 {
@@ -218,6 +224,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 form {
+  overflow: hidden;
   input, select, textarea, ul.select {
     min-width: 80%;
     color: $text;
@@ -358,5 +365,48 @@ ul.select {
     fieldset {
       width: 80%;
     }
+  }
+}
+
+
+
+#styleguide.merge {
+  text-align: left;
+  overflow: hidden;
+
+  .patient {
+    background: #F9F9F9;
+    border: 2px solid #CCC;
+    width: 320px;
+    float: left;
+    @include border-radius(4px);
+    .row {
+      padding: 10px;
+      background: #EAEAEA;
+      margin: 1px;
+      div {
+        span { display: block }
+      }
+    }
+    h3 {
+      font-size: 1.2em;   
+      margin: 0
+    }
+    &.selected {
+      background: lighten($link, 20%);
+      border-color: $link;
+      .row {
+        background: $link;
+        h3 {
+          color: #003F5E;
+        }
+        div {
+          color: #FFF;
+        }
+      }
+    }
+  }
+  .arrows {
+    float: left;
   }
 }
