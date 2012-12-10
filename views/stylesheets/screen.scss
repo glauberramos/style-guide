@@ -143,6 +143,8 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 0.7em;
       color: lighten($highlight, 30%);
       display: block;
+      font-weight: 100;
+      margin-bottom: 40px;
     }
   }
   h3 {
