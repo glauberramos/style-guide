@@ -98,7 +98,7 @@ hr {
 }
 
 #styleguide {
-	width: 60%;
+	width: 80%;
 	margin: 20px auto;
   background: #F9F9F9;
   padding: 20px;
@@ -107,10 +107,29 @@ hr {
 
 header {
   background-color: $highlight;
+  color: #CCC;
+  @include border-radius(5px);
+  a, a:visited, a:hover, a:link {
+    color: white;
+  }
   h1 {
     color: #FFF;
     margin: 0;
     padding: 10px
+  }
+  .logo {
+    float: left;
+    margin: 10px;
+  }
+  .user_options {
+    text-align: right;
+    li {
+      display: inline-block;
+      margin: 20px;
+      &.change_location, &.logout {
+        color: white;
+      }
+    }
   }
 }
 
@@ -119,6 +138,13 @@ article {
   width: 80%;
   margin: 20px auto;
   border: 1px solid #EEE;
+  &.wrapper {
+    border: none;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 83%;
+    padding: 0;
+  }
 }
 
 a {

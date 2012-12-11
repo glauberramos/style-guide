@@ -8,8 +8,25 @@ html[lang="en"]
     link[rel="stylesheet" href="font-awesome.css"]
 		link[rel="stylesheet" href="screen.css"]
 	body
-    #styleguide
+    article.wrapper
       header
+        .logo
+          img src="imgs/logo.png"
+        ul.user_options
+          li.identifier
+            i.icon-user.small
+            | narsand, ER
+          li.change_location
+            a href=""
+              | Change location
+            i.icon-caret-down.link
+          li.logout
+            a href=""
+              | Logout
+            i.icon-signout.small
+
+    #styleguide
+      .header
         h1 Mirebalais Style Guide
       article id="colors"
         h1 Color Palette
