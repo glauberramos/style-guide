@@ -6,6 +6,7 @@
 $link: #007FFF;
 $purple: #800080;
 $text: #003F5E;
+$focus: #FFFDF7;
 $success: #A1D030;
 $alert: #EB6E1F;
 $error: #C41230;
@@ -238,6 +239,10 @@ form {
     margin: 0;
     background-color: #FFF;
     border: 1px solid #DDD;
+    &:focus {
+      outline: none;
+      background: $focus;
+    }
   }
 
   fieldset {
@@ -277,24 +282,29 @@ form {
   }
 }
 
-ul.select { 
-  padding: 0;
-  li {
+form {
+  ul.select { 
     text-align: left;
-    padding: 10px;
-    color: $link;
-    border: 2px solid transparent;
-    &:nth-child(even) {
-      background-color: #F1F1F1;
-    }
-    &:hover {
-      background-color: $link;
-      color: white;
-      cursor: pointer;
-    }
-    &.selected {
-      background-color: $link;
-      border-color: transparent;
+    margin: 0 20px;
+    padding: 0;
+    li {
+      text-align: left;
+      display: inline-block;
+      width: 228px;
+      padding: 5px;
+      color: $link;
+      background-color: #FFF;
+      border-bottom: 1px solid #EFEFEF;
+      margin: 0 10px;
+      &:hover {
+        background-color: $link;
+        color: white;
+        cursor: pointer;
+      }
+      &.selected {
+        background-color: $link;
+        border-color: transparent;
+      }
     }
   }
 }
@@ -387,10 +397,10 @@ ul.select {
       border: 1px solid #eee;
     }
     tr:nth-child(even) {
-      background: #EFF6FA
+      background: $focus;
     }
     tr:nth-child(odd) {
-      background: #F9F9F9
+      background: #F9F9F9;
     }
     thead th {
       border-bottom: 2px solid #DDD;
