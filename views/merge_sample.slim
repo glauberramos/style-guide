@@ -13,7 +13,7 @@ html[lang="en"]
       h2
         | Is it the same person?
         em 
-          | Select a patient and the other will be merged into the one you choose
+          | Select the record you want to keep and the missing data from the other will be merged into it.
 
       div.patient
         div.row
@@ -61,3 +61,13 @@ html[lang="en"]
             | Identifiers
           div
             | TT823R
+      .clear
+      div.note.warning
+        .icon
+          i.icon-warning-sign.medium
+        .text
+          p
+            | Please make sure you're doing the right thing, 
+            strong merging cannot be undone!
+          p
+            em All data (visits, encounters, observations, orders, etc) will be combined into one record.

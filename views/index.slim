@@ -304,18 +304,63 @@ html[lang="en"]
 
       article id="usage"
         h1 Usage Examples
+        h2 Login form
         form
           fieldset
             legend 
               i.icon-lock.small
               | Login
-            p
+            p.left
               label
                 | Username:
               input type="text" placeholder="Enter your username"
+            p.left
               label
                 | Password:
               input type="password" placeholder="Enter your password"
-              input type="submit" value="Log In"
+            .clear
+            p
+              ul.select
+                li An Option
+                li An Option
+                li An Option
+                li An Option
+                li An Option
+                li An Option
+                li An Option
+                li An Option
+                li An Option
 
+            input type="submit" value="Log In"
+        
+        h2 Messages
+        div.note.warning
+          .icon
+            i.icon-warning-sign.medium
+          .text
+            p
+              | Please make sure you're doing the right thing, 
+              strong merging cannot be undone!
+            p
+              em All data (visits, encounters, observations, orders, etc) will be combined into one record.
+
+        div.note.success
+          .icon
+            i.icon-ok.medium
+          .text
+            p
+              | Please make sure you're doing the right thing, 
+              strong merging cannot be undone!
+            p
+              em All data (visits, encounters, observations, orders, etc) will be combined into one record.
+
+        div.note.error
+          .icon
+            i.icon-remove.medium
+          .text
+            p
+              | Please make sure you're doing the right thing, 
+              strong merging cannot be undone!
+            p
+              em All data (visits, encounters, observations, orders, etc) will be combined into one record.
 
