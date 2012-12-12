@@ -129,6 +129,19 @@ header {
       &.change_location, &.logout {
         color: white;
       }
+      &.change_location {
+        border: 1px solid lighten($highlight, 5%);
+        @include border-radius(3px);
+        a {
+          display: block;
+        }
+        &:hover {
+          background: lighten($highlight, 5%);
+          a:hover {
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
 }
