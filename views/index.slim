@@ -257,6 +257,12 @@ html[lang="en"]
               option An Option
               option An Option
               option An Option
+          p  
+            select disabled=""
+              option An Option
+              option An Option
+              option An Option
+              option An Option
           p
             ul.select
               li An Option
@@ -359,7 +365,23 @@ html[lang="en"]
                 li An Option
             p
               input type="submit" value="Log In"
-        
+        #confirmation-dialog
+          h2 Confirmation Dialog
+          .dialog
+            .dialog-header
+              i class="icon-folder-open"
+              h2 Request Paper Record
+            .dialog-content
+              h3 Please confirm:
+              ul
+                li
+                  | Patient: 
+                  h5 Paul, Petter
+                li
+                  | Location: 
+                  h5 ER
+              button.confirm.right Confirm
+              button.cancel Cancel
         h2 Messages
         div.note.warning
           .icon

@@ -284,6 +284,12 @@ form, section {
     }
   }
 
+  select[disabled] {
+    background: #EEE;
+    border: #CCC 1px solid;
+    color: #CCC;
+  }
+
   fieldset {
     border: 1px solid #EEE;
     display: inline-block;
@@ -363,16 +369,24 @@ form {
     font-weight: normal;
     color: $text;
   }
+}
 
+.button, button, input[type="submit"] {
+  @include button;
+
+   &.confirm {
+    @include button($success, darken($success, 8%), white);
+  }
+  
+  &.cancel {
+    @include button($error, darken($error, 8%), white);
+  }
+}
+
+ul.green_btns {
   .button, button, input[type="submit"] {
-    @include button;
-  }
-
-  ul.green_btns {
-    .button, button, input[type="submit"] {
-      @include button($success, darken($success, 8%), white);
-    }   
-  }
+    @include button($success, darken($success, 8%), white);
+  }   
 }
 
 .clear {
@@ -516,5 +530,51 @@ form {
   }
   .arrows {
     float: left;
+  }
+}
+
+#confirmation-dialog {
+  background: #eee;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
+.dialog {
+  width: 50%;
+  padding: 0 0 30px 0;
+  text-align: left;
+  border: 1px solid #CCC;
+  margin: 0 auto;
+  border-radius: 7px;
+  background: white;
+
+  .dialog-header {
+    background: $highlight;
+    color: white;
+    padding: 0 30px;
+    padding-top: 5px;
+    border-radius: 7px 7px 0 0;
+  }
+
+  .dialog-content {
+    padding: 0 30px;
+
+    h5 {
+      margin: 0;
+    }
+  }
+
+  i {
+    font-size: 2em;
+    color: white;
+  }
+
+  h2 {
+    display: inline-block;
+    color: white;
+  }
+
+  ul {
+    margin-bottom: 60px;
   }
 }
