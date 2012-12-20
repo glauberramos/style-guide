@@ -562,6 +562,12 @@ ul.green_btns {
     h5 {
       margin: 0;
     }
+
+    li {
+
+      border-bottom: 1px  solid #eee;
+      margin-bottom: 10px;
+    }
   }
 
   i {
@@ -569,7 +575,7 @@ ul.green_btns {
     color: white;
   }
 
-  h2 {
+  h3 {
     display: inline-block;
     color: white;
   }
