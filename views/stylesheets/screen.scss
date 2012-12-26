@@ -161,7 +161,7 @@ article {
 }
 
 a {
-  color: $link;
+  color: lighten($link, 20%);
   text-decoration: none;
   &:hover {
     color: lighten($link, 10%);
