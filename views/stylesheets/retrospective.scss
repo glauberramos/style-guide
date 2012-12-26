@@ -1,0 +1,97 @@
+.retro {
+    h1 {
+        text-align: left;
+    }
+
+
+    #history {
+        display: inline-block;
+
+        i {
+            font-size: 1em;
+            border: 4px solid;
+            border-radius: 50%;
+        }
+    }
+
+    section {
+        display: inline-block;
+        text-align: left;
+    	margin: 10px 20px 10px 20px;
+    	
+        img.field_check {
+    	    vertical-align: middle;
+    	}
+    	ul {
+    	    display: none;
+    	}
+
+        h4 {
+            display: inline-block;
+            width: 150px;
+            height: auto;
+        }
+
+        li.date {
+            input {
+                min-width: 0;
+                width: 150px;
+                margin: auto 10px;
+            }
+        }
+    }
+
+    section.focused {
+    	
+        span.value {
+    	    display: none;
+    	}
+
+    	ul {
+            display: block;
+            list-style: none;
+            padding: 20px 0px 20px 50px;
+
+            li {
+    	        .optionsList {
+                    display: inline-block;
+                    background-color: white;
+                    color: black;
+                    border: 3px solid #F0F0F0;
+                    padding: 5px;
+                    margin-bottom: 20px;
+
+                    .selectedOption {
+                      background-color: #BBB;
+                      font-weight: bold;
+                    }
+
+                    .option {
+                      font-size: 1.0em;
+                      display: block;
+                      padding: 3px 15px;
+                      width: 250px;
+                    }
+
+                    .option:hover, .option:focus, .focusedOption {
+                      color: white;
+                    }
+                }
+               
+                input, select {
+                    border: 3px solid #F0F0F0;
+                    display: inline;
+                }
+               
+                .focusedQuestion {
+                    border-color: #FCBD02;
+                }
+                
+                div {
+                    margin-left: 10px;
+                }
+            }
+    	}
+    }
+
+}

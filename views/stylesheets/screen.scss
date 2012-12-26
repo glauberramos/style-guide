@@ -268,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-form {
+form, section {
   overflow: hidden;
   input, select, textarea, ul.select {
     min-width: 80%;
@@ -282,6 +282,12 @@ form {
       outline: none;
       background: $focus;
     }
+  }
+
+  select[disabled] {
+    background: #EEE;
+    border: #CCC 1px solid;
+    color: #CCC;
   }
 
   fieldset {
@@ -363,16 +369,24 @@ form {
     font-weight: normal;
     color: $text;
   }
+}
 
+.button, button, input[type="submit"] {
+  @include button;
+
+   &.confirm {
+    @include button($success, darken($success, 8%), white);
+  }
+  
+  &.cancel {
+    @include button($error, darken($error, 8%), white);
+  }
+}
+
+ul.green_btns {
   .button, button, input[type="submit"] {
-    @include button;
-  }
-
-  ul.green_btns {
-    .button, button, input[type="submit"] {
-      @include button($success, darken($success, 8%), white);
-    }   
-  }
+    @include button($success, darken($success, 8%), white);
+  }   
 }
 
 .clear {
@@ -516,5 +530,60 @@ form {
   }
   .arrows {
     float: left;
+  }
+}
+
+#confirmation-dialog {
+  background: #eee;
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
+.dialog {
+  width: 450px;
+  padding: 0 0 30px 0;
+  text-align: left;
+  border: 1px solid #CCC;
+  margin: 0 auto;
+  border-radius: 7px;
+  background: white;
+
+  .dialog-header {
+    background: $highlight;
+    color: white;
+    padding: 0 30px;
+    padding-top: 5px;
+    border-radius: 7px 7px 0 0;
+    border-bottom: 2px solid #CCC;
+  }
+
+  .dialog-content {
+    padding: 0 30px;
+
+    h5 {
+      margin: 0;
+    }
+
+    li {
+
+      border-bottom: 1px  solid #eee;
+      margin-bottom: 10px;
+    }
+  }
+
+  i {
+    font-size: 1.8em;
+    color: white;
+  }
+
+  h3 {
+    width: 350px;
+    text-align: center;
+    display: inline-block;
+    color: white;
+  }
+
+  ul {
+    margin-bottom: 40px;
   }
 }

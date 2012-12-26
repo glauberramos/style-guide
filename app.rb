@@ -17,6 +17,10 @@ get '/merge' do
     slim :merge_sample
 end
 
+get '/retrospective' do
+    slim :retrospective
+end
+
 configure do
   Compass.configuration do |config|
     config.project_path = File.dirname(__FILE__)
@@ -29,4 +33,9 @@ end
 get '/screen.css' do
 	content_type 'text/css', :charset => 'utf-8'
     scss :'stylesheets/screen'
+end
+
+get '/retrospective.css' do
+  content_type 'text/css', :charset => 'utf-8'
+    scss :'stylesheets/retrospective'
 end
