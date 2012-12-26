@@ -559,18 +559,18 @@ form {
   width: 450px;
   padding: 0 0 30px 0;
   text-align: left;
-  border: 1px solid #CCC;
-  margin: 0 auto;
-  border-radius: 7px;
   background: white;
+  margin: 0 auto;
+  @include border-radius(3px);
+  @include box-shadow(2px 2px 15px #999, -2px -2px 15px #999);
 
   .dialog-header {
     background: $highlight;
     color: white;
     padding: 0 30px;
     padding-top: 5px;
-    border-radius: 7px 7px 0 0;
-    border-bottom: 2px solid #CCC;
+    border-bottom: darken($highlight, 20%) 1px solid;
+    @include border-top-radius(3px);
   }
 
   .dialog-content {
@@ -579,9 +579,7 @@ form {
     h5 {
       margin: 0;
     }
-
     li {
-
       border-bottom: 1px  solid #eee;
       margin-bottom: 10px;
     }
