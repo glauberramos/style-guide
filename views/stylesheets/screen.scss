@@ -86,6 +86,8 @@ ul, ol, li {
 
 ol {
   display: inline-block;
+  padding: 0 10px;
+  margin: 0 0 0 20px;
 }
 
 ul {
@@ -175,6 +177,17 @@ a {
   &:visited, &.visited {
     color: darken($link, 10%);
   }
+}
+
+blockquote, code {
+  display: block;
+  text-align: left;
+}
+
+code {
+  padding: 10px;
+  border: 1px solid #555;
+  margin-top: 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -468,27 +481,25 @@ ul.green_btns {
   }
 }
 
-#usage {
-  form {
-    width: 100%;
-    display: block;
-    p {
-      padding: 0 20px;
-    }
-    label {
-      margin-top: 3%;
-    }
+form {
+  width: 100%;
+  display: block;
+  p {
+    padding: 0 20px;
+  }
+  label {
+    margin-top: 3%;
+  }
 
-    input[type="text"], input[type="password"] {
-      margin-top: 3%;
-    }
+  input[type="text"], input[type="password"] {
+    margin-top: 3%;
+  }
 
-    input[type="submit"] {
-      @include button($success, darken($success, 8%), white);
-    }
+  input[type="submit"] {
+    @include button($success, darken($success, 8%), white);
+  }
 
-    fieldset {
-    }
+  fieldset {
   }
 }
 

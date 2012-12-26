@@ -239,42 +239,21 @@ html[lang="en"]
       article id="forms"
         h1 Forms
         blockquote
-          | Everything inside tag &lt;form&gt; is auto styled to follow this styleguide rules.
+          | Everything inside tag </form/> is auto styled to follow this styleguide rules.
           br
           | The html structure is basically this:
           code
-            | &lt;form&gt;
-            br
-            | &nbsp; &lt;fieldset&gt;
-            br
-            |  &nbsp;  &nbsp; &lt;legend&gt;
-            br
-            |  &nbsp;  &nbsp;  &nbsp; &lt;i class="icon-class-if-needed"&gt;&lt;/i&gt;
-            br
-            |  &nbsp;  &nbsp;  &nbsp; Form title if needed
-            br
-            |  &nbsp;  &nbsp; &lt;/legend&gt;
-            br
-            |  &nbsp;  &nbsp; &lt;p class="input-position-class"&gt;
-            br
-            |  &nbsp;  &nbsp;  &nbsp; &lt;label name="input-id"&gt;Input label&lt;/label&gt;
-            br
-            |  &nbsp;  &nbsp;  &nbsp; &lt;input id="input-id"/&gt;
-            br
-            |  &nbsp;  &nbsp; &lt;/p&gt;
-            br
-            |  &nbsp; &lt;/fieldset&gt;
-            br
-            | &lt;/form&gt;
-          h4 Obs.:
-          ol
-            li Always group a &lt;label&gt; and its &lt;input&gt; inside a &lt;p/&gt tag;
-            li Always link the &lt;label&gt; name to its &lt;input&gt; id;
-            li Add class "left" for each &lt;p/&gt; tag if side-by-side inputs are needed (as example below);
-            li &lt;legend&gt; tag is only necessary if a form title is needed; 
-
-
-        h2 A form example:
+            | <form>
+              | <fieldset>
+                | <legend>
+                  | <i class="icon-class-if-wanted"></i>
+                  | Form title
+                | </legend>
+                | <p class="add-'left'-class-if-sidebyside-inputs-are-needed">
+                    | <label>Input label</label>
+                    | <input />
+                | </p>
+        h2 This is a form example:
         form
           fieldset
             legend 
@@ -304,61 +283,6 @@ html[lang="en"]
                 li An Option
             p
               input type="submit" value="Log In"
-
-        h2 More form elements
-        form
-          p
-            input placeholder="Text Input" type="text"
-          p
-            input placeholder="Email Input" type="email"
-          p
-            input placeholder="Password Input" type="password"
-          p
-            input placeholder="Number Input" type="number"
-          p
-            input placeholder="Search Input" type="search"
-          p
-            textarea placeholder="Textarea."
-          p  
-            select
-              option An Option
-              option An Option
-              option An Option
-              option An Option
-          p  
-            select disabled=""
-              option An Option
-              option An Option
-              option An Option
-              option An Option
-          p
-            ul.select
-              li An Option
-              li An Option
-              li An Option
-              li An Option
-              li An Option
-              li An Option
-              li An Option
-              li An Option
-              li An Option
-          br
-          .checkboxes
-            p
-              input type="checkbox"
-              label A Checkbox
-            p
-              input checked="checked" type="checkbox"
-              label A Checked Checkbox
-          .radios
-            p
-              input checked="checked" name="radiogroup" type="radio"
-              label A Checked Radio
-            p
-              input name="radiogroup" type="radio"
-              label A Radio
-          input type="submit" value="Submit Input"
-
 
       article id="lists"
         h1 Lists
