@@ -1,18 +1,19 @@
 doctype html
 html[lang="en"]
-    head
-        title Retrospective
-        meta[charset="utf-8"]
-        meta[name="viewport" content="width=device-width"]
-        link[rel="stylesheet" href="normalize.css"]
-        link[rel="stylesheet" href="screen.css"]
-        link[rel="stylesheet" href="font-awesome.css"]
-        link[rel="stylesheet" href="retrospective.css"]
-    body
-        #styleguide.retro
-            h1 class="label" 
-                | Retrospective check-in
-            aside#history
+  head
+    title Retrospective
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width"]
+    link[rel="stylesheet" href="normalize.css"]
+    link[rel="stylesheet" href="screen.css"]
+    link[rel="stylesheet" href="font-awesome.css"]
+    link[rel="stylesheet" href="retrospective.css"]
+  body
+      #styleguide.retro
+          h1 class="label" 
+              | Retrospective check-in
+          section#retro-checkin
+            aside.history
                 ul
                   li 
                     i class="icon-ok"
@@ -22,49 +23,35 @@ html[lang="en"]
                     | Date
                   li
                     | Payment
-            section id="checkinInformation" class="focused"
-                
-                span class="value" data-bind="text:patientName"
-                span class="value" data-bind="text:locationName" 
-                    | Antepartum ward
-                span class="value" data-bind="text:checkinDate"
-                ul
-                    li data-bind="template: {name:'optionsList-template', foreach:locations}"
-                        h4 data-bind="text:label, attr: {for: widgetId}" for="location"
-                            | Location
-                        div class="optionsList" data-bind="foreach: options, attr: {id:widgetId}" id="location"
-                            span class="option selectedOption" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
-                                | Antepartum ward
-                            span class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
-                                | Community Health
-                            span class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
-                                | Dental
-                            span class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
-                                | Emergency
-                            span class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
-                                | ICU
-                            span class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
-                                | Isolation
-                            span class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
-                                | Labor and Delivery
-                            span class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
-                                | Lacolline
-                            span class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}" 
-                                | Main laboratory
-                    li.date
-                        h4 for="checkinDate_day"
-                            | Check-in date
-                        input id="checkinDate_day" type="text" data-bind="value:checkinDay" maxlength="2" placeholder="Day" class=""
-                        span
-                            | /
-                        input id="checkinDate_month" type="text" data-bind="value:checkinMonth" maxlength="2" placeholder="Month" class=""
-                        span
-                            | /
-                        input id="checkinDate_year" type="text" data-bind="value:checkinYear" maxlength="4" placeholder="Year" class=""
-                    li.date
-                        h4 for="checkinTime_hour"
-                            | Check-in time
-                        input id="checkinTime_hour" data-bind="value:checkinHour" maxlength="2" placeholder="Hour" class=""
-                        span
-                            | :
-                        input id="checkinTime_minutes" data-bind="value:checkinMinutes" maxlength="2" placeholder="Minutes" class=""
+            #checkin-info
+              form
+                p
+                  h4 data-bind="text:label, attr: {for: widgetId}" for="location"
+                    | Location
+                  ul.select
+                    li class="option selectedOption" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                      | Antepartum ward
+                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                      | Community Health
+                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                      | Dental
+                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                      | Emergency
+                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                      | ICU
+                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                      | Isolation
+                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                      | Labor and Delivery
+                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                      | Lacolline
+                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}" 
+                      | Main laboratory
+                  p.date
+                    h4 for="checkinDate_day"
+                      | Check-in date
+                    input id="checkinDate_day" type="text" data-bind="value:checkinDay" maxlength="2" placeholder="Day/Month/Year" class=""
+                  p.date
+                    h4 for="checkinTime_hour"
+                      | Check-in time
+                    input id="checkinTime_hour" data-bind="value:checkinHour" maxlength="2" placeholder="00:00" class=""
