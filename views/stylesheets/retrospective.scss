@@ -68,6 +68,11 @@
     img.field_check {
       vertical-align: middle;
     }
+    p {
+      label {
+        font-size: 1.2em;
+      }
+    }
   }
 
   section.focused {
@@ -106,18 +111,6 @@
           }
         }
        
-        input, select {
-          border: 3px solid #F0F0F0;
-          display: inline;
-        }
-       
-        .focusedQuestion {
-          border-color: #FCBD02;
-        }
-        
-        div {
-          margin-left: 10px;
-        }
       }
     }
   }
