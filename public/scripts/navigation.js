@@ -19,9 +19,27 @@ var FormNavigator = function() {
 
 		if(!isFirstSection()) {
 			$('.active').removeClass('active').prev('form').addClass('active');
-			$('.active').find('select, input').first().focus();
+			$('.active').find('select, input').last().focus();
 		}	
 	};
+
+	moveNextField = function() {
+    	if(!isLastField()) {
+    		var nextElement = $('.selected').parent().next('p').find('input, select')[0];
+    		$(nextElement).focus();
+    	} else {
+    		moveNextSection();
+    	}
+	}
+
+	movePreviousField = function() {
+		if(!isFirstField()) {
+    		var previousElement = $('.selected').parent().prev('p').find('input, select')[0];
+    		$(previousElement).focus();
+    	} else {
+    		movePreviousSection();
+    	}
+	}
 
 	isFirstSection = function() {
 		return !$('.active').prev('form').length > 0;
@@ -49,27 +67,14 @@ var FormNavigator = function() {
 
 	 $('body').keydown(function(key) {
 		if(key.shiftKey && key.which == 9) {
-        	key.preventDefault();
-
-			if(!isFirstField()) {
-        		var previousElement = $('.selected').parent().prev('p').find('input, select')[0];
-        		$(previousElement).focus();
-
-        		return;
-        	} else {
-        		movePreviousSection();
-        	}
+			key.preventDefault();
+        	movePreviousField();
+        	return;
         }
 
         if(key.which == 9 || key.which == 13) {
         	key.preventDefault();
-
-        	if(!isLastField()) {
-        		var nextElement = $('.selected').parent().next('p').find('input, select')[0];
-        		$(nextElement).focus();
-        	} else {
-        		moveNextSection();
-        	}
+        	moveNextField();
         }        
 	 });
 
