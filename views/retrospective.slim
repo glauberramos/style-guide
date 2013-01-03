@@ -40,31 +40,31 @@ html[lang="en"]
                     | Payment
             #checkin-info
               form
-                p.patient-id
+                p.patient-id.hidden
                   label for="checkinDate_day"
                     | Patient ID
                   input id="checkinPatient_id" type="text" data-bind="value:patientID" maxlength="2" placeholder="Patient ID" class=""
                 p
                   label data-bind="text:label, attr: {for: widgetId}" for="location"
                     | Location
-                  ul.select
-                    li class="option selectedOption" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                  select size="10"
+                    option class="option selectedOption" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
                       | Antepartum ward
-                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
                       | Community Health
-                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
                       | Dental
-                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
                       | Emergency
-                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
                       | ICU
-                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
                       | Isolation
-                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
                       | Labor and Delivery
-                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
                       | Lacolline
-                    li class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}" 
+                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}" 
                       | Main laboratory
                 p.date
                   label for="checkinDate_day"
