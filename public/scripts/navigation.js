@@ -59,8 +59,13 @@ var FormNavigator = function() {
 
 	$('#retro-checkin li').click(function() {
 		//change breadcrumb
-		$('#retro-checkin li.doing').removeClass('doing to-do').addClass('done');
-		$(this).removeClass('to-do, done').addClass('doing');
+		if($(this).attr('section') > $('#retro-checkin li.doing').attr('section')) {
+			$('#retro-checkin li.doing').removeClass('doing').addClass('done');
+			$(this).removeClass('to-do').addClass('doing');
+		} else {
+			$('#retro-checkin li.doing').removeClass('doing').addClass('to-do');
+			$(this).removeClass('done').addClass('doing');
+		}
 
 		//change section
 		$('.active').removeClass('active');
