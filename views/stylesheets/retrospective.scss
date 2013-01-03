@@ -92,6 +92,29 @@
         border: 2px solid $link;
       }
     }
+
+  form {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .select {
+      input {
+        display: none;
+      }
+      label {
+        display: block;
+        font-size: 0.8em;
+        
+        &:hover {
+          background: $link;
+        }
+      }
+    }
+  }
+
   }
 
   section.focused {
@@ -133,17 +156,4 @@
     }
   }
 
-  form {
-    display: none;
-
-    &.active {
-      display: block;
-    }
-
-    select {
-      option {
-        float: left;
-      }
-    }
-  }
 }

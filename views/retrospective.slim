@@ -38,24 +38,33 @@ html[lang="en"]
                 p
                   label data-bind="text:label, attr: {for: widgetId}" for="location"
                     | Location
-                  select size="10" class="location"
-                    option selected="" class="option selectedOption" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                  span.select.location
+                    input type="radio" selected="" class="option selectedOption" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    label
                       | Antepartum ward
-                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    input type="radio" class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    label
                       | Community Health
-                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    input type="radio" class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    label
                       | Dental
-                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    input type="radio" class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    label
                       | Emergency
-                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    input type="radio" class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    label
                       | ICU
-                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    input type="radio" class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    label
                       | Isolation
-                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    input type="radio" class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    label
                       | Labor and Delivery
-                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    input type="radio" class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
+                    label
                       | Lacolline
-                    option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}" 
+                    input type="radio" class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}" 
+                    label
                       | Main laboratory
                 p.date
                   label for="checkinDate_day"
