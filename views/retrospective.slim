@@ -16,7 +16,7 @@ html[lang="en"]
           section#retro-checkin
             aside.history
               ul.options
-                li.doing
+                li.doing section="1"
                   i class="icon-ok"
                   i class="icon" 
                     span
@@ -25,7 +25,7 @@ html[lang="en"]
                     | Check-in Info
                     em
                       | preview info if needed
-                li.to-do
+                li.to-do section="2"
                   i class="icon-ok"
                   i class="icon" 
                     span
@@ -33,7 +33,7 @@ html[lang="en"]
                   span
                     | Payment Info
             #checkin-info
-              form.active
+              form.active section="1"
                 h3 Check-in Info
                 p
                   label data-bind="text:label, attr: {for: widgetId}" for="location"
@@ -79,7 +79,7 @@ html[lang="en"]
                   label for="checkinDate_day"
                     | Check-in date
                   input id="checkinDate_day" type="text" data-bind="value:checkinDay" placeholder="Day/Month/Year"
-              form.hidden formPosition="2"
+              form section="2"
                  h3 Payment Info
                  p
                   label data-bind="text:label, attr: {for: widgetId}" for="location"

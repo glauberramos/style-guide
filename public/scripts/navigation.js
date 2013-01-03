@@ -57,6 +57,17 @@ var FormNavigator = function() {
 		return !$('.selected').parent().next('p').find('input, select').length > 0;
 	};
 
+	$('#retro-checkin li').click(function() {
+		//change breadcrumb
+		$('#retro-checkin li.doing').removeClass('doing to-do').addClass('done');
+		$(this).removeClass('to-do, done').addClass('doing');
+
+		//change section
+		$('.active').removeClass('active');
+		$('form[section=' + $(this).attr('section') + ']').addClass('active');
+		$('.active').find('select, input').first().focus();
+	});
+
 	$('input, select').on('focus', function() {
 		$(this).addClass('selected');
 	});
