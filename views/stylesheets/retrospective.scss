@@ -101,7 +101,7 @@
     }
 
     .select {
-
+      padding: 1px 0 0 0;
       input[type="radio"] {
         display: none;
         &:checked + label {
@@ -110,9 +110,8 @@
         }
       }
       label {
-        display: block;
         font-size: 0.9em;
-        margin: 0;
+        margin: 0 1px;
         
       }
     }
