@@ -5,9 +5,10 @@ var FormNavigator = function() {
 				.next().addClass('doing').removeClass('to-do');
 		}
 
-		$('.active').removeClass('active').next('form').addClass('active');
-
-		$('.active').find('select, input').first().focus();			
+		if(!isLastSection()) {
+			$('.active').removeClass('active').next('form').addClass('active');
+			$('.active').find('select, input').first().focus();
+		}
 	};
 
 	movePreviousSection = function() {
@@ -16,10 +17,19 @@ var FormNavigator = function() {
 				.prev().addClass('doing').removeClass('done');
 		}
 
-		$('.active').removeClass('active').prev('form').addClass('active');
-
-		$('.active').find('select, input').first().focus();		
+		if(!isFirstSection()) {
+			$('.active').removeClass('active').prev('form').addClass('active');
+			$('.active').find('select, input').first().focus();
+		}	
 	};
+
+	isFirstSection = function() {
+		return !$('.active').prev('form').length > 0;
+	}
+
+	isLastSection = function() {
+		return !$('.active').next('form').length > 0;
+	}
 
 	isFirstField = function() {
 		return !$('.selected').parent().prev('p').find('input, select').length > 0;
