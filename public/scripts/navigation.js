@@ -61,10 +61,10 @@ var FormNavigator = function() {
 		//change breadcrumb
 		if($(this).attr('section') > $('#retro-checkin li.doing').attr('section')) {
 			$('#retro-checkin li.doing').removeClass('doing').addClass('done');
-			$(this).removeClass('to-do').addClass('doing');
+			$(this).removeClass('to-do done').addClass('doing');
 		} else {
 			$('#retro-checkin li.doing').removeClass('doing').addClass('to-do');
-			$(this).removeClass('done').addClass('doing');
+			$(this).removeClass('done to-do').addClass('doing');
 		}
 
 		//change section
