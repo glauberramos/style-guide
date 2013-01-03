@@ -101,16 +101,19 @@
     }
 
     .select {
-      input {
+
+      input[type="radio"] {
         display: none;
+        &:checked + label {
+          background: $link;
+          color: white;
+        }
       }
       label {
         display: block;
-        font-size: 0.8em;
+        font-size: 0.9em;
+        margin: 0;
         
-        &:hover {
-          background: $link;
-        }
       }
     }
   }

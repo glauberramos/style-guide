@@ -279,7 +279,7 @@ h1, h2, h3, h4, h5, h6 {
 
 form, section {
   overflow: hidden;
-  input, select, textarea, ul.select {
+  input, select, textarea, .select {
     min-width: 80%;
     color: $text;
     display: block;
@@ -337,11 +337,10 @@ form, section {
 }
 
 form {
-  ul.select { 
+  .select { 
     text-align: left;
-    margin: 0 20px;
     padding: 0;
-    li {
+    li, label {
       text-align: left;
       display: inline-block;
       width: 228px;
@@ -355,9 +354,10 @@ form {
         color: white;
         cursor: pointer;
       }
-      &.selected {
+      &.selected, &:checked + label {
         background-color: $link;
         border-color: transparent;
+        color: white;
       }
     }
   }
