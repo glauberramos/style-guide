@@ -28,10 +28,23 @@
       }
       &.done {
         color: #BBB;
+
+        .icon {
+          display: none;
+        }
       }
       &.doing {
         background: $link;
         color: #FFF;
+
+        .icon-ok {
+          display: none;
+        }
+      }
+      &.to-do {
+        .icon-ok {
+          display: none;
+        }
       }
       i {
         display: inline-block;
@@ -110,7 +123,6 @@
             color: white;
           }
         }
-       
       }
     }
   }
