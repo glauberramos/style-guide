@@ -39,7 +39,7 @@ html[lang="en"]
                   label data-bind="text:label, attr: {for: widgetId}" for="location"
                     | Location
 
-                  select size="10" class="location"
+                  /select size="10" class="location"
                     option selected="" class="option selectedOption" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
                       | Antepartum ward
                     option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}"
@@ -71,7 +71,7 @@ html[lang="en"]
                     option class="option" data-bind="text: name, click:$parent.selectOption, css:{selectedOption: selected}" 
                       | Main laboratory
 
-                  /span.select.location
+                  span.select.location
                     input type="radio" name="sex" id="female" value="female"
                     label for="female"
                       | Main feratory

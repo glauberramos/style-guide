@@ -283,7 +283,7 @@ form, section {
     min-width: 80%;
     color: $text;
     display: block;
-    padding: 5px 10px;
+    padding: 5px 0 5px 10px;
     margin: 0;
     background-color: #FFF;
     border: 1px solid #DDD;
@@ -291,6 +291,10 @@ form, section {
       outline: none;
       background: $focus;
     }
+  }
+
+  select {
+    overflow-y: scroll;
   }
 
   select[disabled] {

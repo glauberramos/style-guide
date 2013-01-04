@@ -21,6 +21,10 @@ get '/retrospective' do
     slim :retrospective
 end
 
+get '/retrospective2' do
+    slim :retrospective2
+end
+
 configure do
   Compass.configuration do |config|
     config.project_path = File.dirname(__FILE__)
