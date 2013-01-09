@@ -422,17 +422,24 @@ ul.green_btns {
   overflow: hidden;
   clear: both;
   position: relative;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 
   .icon {
     position: absolute;
+    top: 20px;
+
     i {
-      padding: 0;
-      padding-right: 20px;
+      border-radius: 50%;
+      border: 2px solid;
+      padding: 0 6px;
+      font-size: 1.7em;
     }
   }
   .text {
+
     display: inline-block;
-    padding-left: 35px;
+    padding-left: 45px;
     p {
       margin: 5px;
       text-align: left;
@@ -442,17 +449,19 @@ ul.green_btns {
     border: 1px solid transparent;
   }
   &.warning {
-    background: lighten($alert, 10%);
+    color: $alert;
+    background: $alertBackground;
     border-color: $alert;
   }
   &.success {
-    background: lighten($success, 10%);
-    border-color: $success
+    color: darken($success, 25%);
+    background: $successBackground;
+    border-color: darken($success, 25%);
   }
   &.error {
-    background: lighten($error, 10%);
+    color: $error;
+    background: $errorBackground;
     border-color: $error;
-    color: white;
   }
 }
 
