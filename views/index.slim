@@ -445,12 +445,36 @@ html[lang="en"]
                 em
                   | Please confirm:
               ul
-                li
+                li.info
+                  span Patient
+                  h5 Paul, Petter
+                li.info
+                  span Location
+                  h5 ER
+              button.confirm.right Confirm
+              button.cancel Cancel
+        #action-dialog
+          h2 Action Messages
+          .dialog
+            .dialog-header
+              i class="icon-folder-open"
+              h3 Send Paper Record
+            .dialog-content
+              p
+                em
+                  | Select location:
+              ul
+                li.info
                   span Patient
                   h5 Paul, Petter
                 li
                   span Location
-                  h5 ER
+                  select
+                    option Emergency Room
+                    option Antepartum ward
+                    option Labor and Delivery
+                    option Dental
+                    option Central Archives
               button.confirm.right Confirm
               button.cancel Cancel
         h2 Alert Messages
