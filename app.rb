@@ -21,6 +21,10 @@ get '/retrospective' do
     slim :retrospective
 end
 
+get '/download/:filename' do |filename|
+  send_file "./public/#{filename}", :filename => filename, :type => 'Application/octet-stream'
+end
+
 get '/retrospective2' do
     slim :retrospective2
 end
