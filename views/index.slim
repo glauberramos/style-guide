@@ -477,39 +477,32 @@ html[lang="en"]
                     option Central Archives
               button.confirm.right Confirm
               button.cancel Cancel
-        h2 Alert Messages
-        div.note.warning
-          .icon
-            i.icon-warning-sign.medium
-          .text
-            p
-              | Please make sure you're doing the right thing, 
-              strong merging cannot be undone!
-            p
-              em All data (visits, encounters, observations, orders, etc) will be combined into one record.
-          .close-icon
-            i.icon-remove
-
-        div.note.success
-          .icon
-            i.icon-ok.medium
-          .text
-            p
-              | Please make sure you're doing the right thing, 
-              strong merging cannot be undone!
-            p
-              em All data (visits, encounters, observations, orders, etc) will be combined into one record.
-          .close-icon
-            i.icon-remove
-
-        div.note.error
-          .icon
-            i.icon-remove.medium
-          .text
-            p
-              | Please make sure you're doing the right thing, 
-              strong merging cannot be undone!
-            p
-              em All data (visits, encounters, observations, orders, etc) will be combined into one record.
-          .close-icon
-            i.icon-remove
+        h2 Notification Messages
+        .toast-container.toast-position-top-right
+          .toast-item-wrapper
+            .toast-item.toast-type-success
+              .toast-item-image.toast-item-image-success.icon-ok
+              .toast-item-close.icon-remove
+              p The selected record(s) have been assigned
+          .toast-item-wrapper
+            .toast-item.toast-type-error
+              .toast-item-image.toast-item-image-error.icon-remove
+              .toast-item-close.icon-remove
+              p The selected record(s) have been assigned
+          .toast-item-wrapper
+            .toast-item.toast-type-alert
+              .toast-item-image.toast-item-image-alert.icon-exclamation-sign
+              .toast-item-close.icon-remove
+              p The selected record(s) have been assigned
+          .toast-item-wrapper
+            .toast-item.toast-type-success
+              .toast-item-image.toast-item-image-success.icon-ok
+              .toast-item-close.icon-remove
+              p
+                span.toast-record-found
+                  | Send to:
+                  span.toast-record-location
+                    | Emergency
+                  | Dossier id:
+                  span.toast-record-id
+                    | a166009
