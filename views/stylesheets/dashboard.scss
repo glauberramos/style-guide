@@ -11,7 +11,7 @@ body {
 #visits {
 	.summary {
 		border: 1px solid #ccc;
-		background: #ddd;
+		background: #eee;
 		border-radius: 3px;
 		width: 235px;
 		margin-bottom: 5px;
@@ -68,7 +68,7 @@ body {
 				display: inline-block;
 
 				&.active {
-					color: $success;
+					color: darken($success, 10%);
 					font-family: "OpenSansBold";
 					display: inline-block;
 				}
