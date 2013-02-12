@@ -10,28 +10,31 @@ html[lang="en"]
     link[rel="stylesheet" href="dashboard.css"]
 
 	body
-		h5 All Visits
+		aside
+			h5 
+				i class="icon-calendar small"
+				|All Visits
 
-		section#visits
-			.summary.selected
-				i class="icon-calendar"
-				.information
-					strong Malaria, Fever
-					span
-						| 12/01/12 - &nbsp;
-					span.active Active
-				i class="icon-chevron-right select-visit"
-			.summary
-				i class="icon-calendar"
-				.information
-					strong HIV, Fever, Broken Leg
-					span
-						| 12/01/12 - 15/01/12
-				i class="icon-chevron-right select-visit"
-			.summary
-				i class="icon-calendar"
-				.information
-					strong Congenital Disorder, Fever
-					span
-						| 12/01/12 - 15/01/12
-				i class="icon-chevron-right select-visit"
+			ul#visits
+				li.selected
+					.information
+						span
+							i class="icon-calendar"
+							| 12/01/12 - &nbsp;
+							span.active Active
+						strong Malaria
+					i class="icon-chevron-right select-visit"
+				li
+					.information
+						span
+							i class="icon-calendar"
+							| 12/01/12 - 15/01/12
+						strong Infection des voies respiratoires supérieures, sans précision 
+					i class="icon-chevron-right select-visit"
+				li
+					.information
+						span
+							i class="icon-calendar"
+							| 12/01/12 - 15/01/12
+						strong Congenital Disorder
+					i class="icon-chevron-right select-visit"

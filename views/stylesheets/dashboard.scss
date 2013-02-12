@@ -8,25 +8,33 @@ body {
 	padding-left: 10px;
 }
 
-#visits {
-	.summary {
-		border: 1px solid #ccc;
-		background: #eee;
-		border-radius: 3px;
-		width: 235px;
-		margin-bottom: 5px;
-		padding: 5px;
+aside {
+	width: 22%;
 
-		&.selected {
-			background: white;
-			border: 1px solid #eee;
-			box-shadow: inset 3px 3px 7px #bbb;
+	h5 {
+		border-bottom: 1px solid #DDD;
+	
+		i {
+			font-size: 1.4em;
+			line-height: 0.4em;
+			margin-right: 5px;
 		}
+	}
+}
+
+#visits {
+	background: #F9f9f9;
+	padding: 10px;
+
+	li {
+		border-bottom: 1px solid #ccc;
+		width: 235px;
+		padding: 10px;
+		height: 60px;
 
 		&:hover {
 			background: $text;
 			cursor: pointer;
-			border: 1px solid $text;
 			box-shadow: none;
 
 			.information {
@@ -41,8 +49,32 @@ body {
 				color: #ccc;
 			}
 		}
+		
+		&.selected, &.selected:hover {
+			background: white;
+			border: 1px solid #FFF;
+			box-shadow: inset 1px 1px 3px #bbb;
+			cursor: auto;
+			
+			i {
+				color: #777;
+			}
+			
+			.information {
+				color: $text;
+				
+				span {
+					color: black;
+					
+				span.active {
+						color: darken($success, 10%);
+						font-size: 1.1em;
+					}
+				}
+			}
+		}
 
-		i {
+		.icon-chevron-right {
 			font-size: 1.7em;
 			display: inline-block;
 			padding: 0 7px;
@@ -53,17 +85,20 @@ body {
 
 		.select-visit {
 			font-size: 1em;
-			margin-top: 2%;
+			margin-top: 8%;
 		}
 
 		.information {
 			display: inline-block;
 			color: $text;
-			margin-right: 5px;
+			width: 85%;
+			
+			.icon-calendar {
+				font-size: 1.2em;
+			}
 
 			span {
 				font-size: 0.75em;
-				display: block;
 				color: black;
 				display: inline-block;
 
@@ -76,10 +111,11 @@ body {
 
 			strong {
 				width: 170px;
-				font-family: "OpenSansBold";
-				font-size: 0.8em;
+				font-size: 1em;
 				display: block;
 				font-weight: normal;
+				overflow: hidden;
+				height: 45px;
 			}
 		}
 	}
