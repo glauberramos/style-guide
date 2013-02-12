@@ -51,3 +51,8 @@ get '/retrospective.css' do
   content_type 'text/css', :charset => 'utf-8'
     scss :'stylesheets/retrospective'
 end
+
+get '/dashboard.css' do
+  content_type 'text/css', :charset => 'utf-8'
+    scss :'stylesheets/dashboard'
+end

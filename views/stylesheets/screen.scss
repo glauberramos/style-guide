@@ -91,6 +91,36 @@ hr {
 
 }
 
+.title {
+  font-weight: 700;
+  font-family: "OpenSansBold"
+}
+
+.body {
+  font-weight: 400;
+}
+
+.small {
+  font-weight: 300;
+  font-family: "OpenSansLight"
+}
+
+.clear {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.hidden {
+  display: none;
+}
+
 #styleguide {
 	width: 80%;
 	margin: 10px auto;

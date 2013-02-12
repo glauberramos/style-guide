@@ -1,0 +1,36 @@
+doctype html
+html[lang="en"]
+  head
+    title Patient Dashboard
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width"]
+    link[rel="stylesheet" href="normalize.css"]
+    link[rel="stylesheet" href="screen.css"]
+    link[rel="stylesheet" href="font-awesome.css"]
+    link[rel="stylesheet" href="dashboard.css"]
+
+	body
+		h5 All Visits
+
+		section#visits
+			.summary.active
+				i class="icon-calendar"
+				.information
+					span
+						| 12/01/12 - Active
+					strong Malaria, Fever
+				i class="icon-chevron-right select-visit"
+			.summary
+				i class="icon-calendar"
+				.information
+					span
+						| 12/01/12 - 15/01/12
+					strong HIV, Fever, Broken Leg
+				i class="icon-chevron-right select-visit"
+			.summary
+				i class="icon-calendar"
+				.information
+					span
+						| 12/01/12 - 15/01/12
+					strong Congenital Disorder, Fever
+				i class="icon-chevron-right select-visit"
