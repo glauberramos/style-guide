@@ -5,15 +5,42 @@ body {
 	text-align: left;
 	background: white;
 	color: lighten(black, 20%);
+	padding-left: 10px;
 }
 
 #visits {
 	.summary {
-		border: 1px solid #ddd;
-		background: #f5f5f5;
+		border: 1px solid #ccc;
+		background: #ddd;
 		border-radius: 3px;
-		width: 230px;
+		width: 235px;
 		margin-bottom: 5px;
+		padding: 5px;
+
+		&.selected {
+			background: white;
+			border: 1px solid #eee;
+			box-shadow: inset 3px 3px 7px #bbb;
+		}
+
+		&:hover {
+			background: $text;
+			cursor: pointer;
+			border: 1px solid $text;
+			box-shadow: none;
+
+			.information {
+				color: white;
+
+				span {
+					color: white;
+				}
+			}
+
+			i {
+				color: #ccc;
+			}
+		}
 
 		i {
 			font-size: 1.7em;
@@ -21,20 +48,30 @@ body {
 			padding: 0 7px;
 			color: #777;
 			vertical-align: top;
+			margin-top: -3px;
 		}
 
 		.select-visit {
 			font-size: 1em;
-			margin-top: 4%;
+			margin-top: 2%;
 		}
 
 		.information {
 			display: inline-block;
 			color: $text;
+			margin-right: 5px;
 
 			span {
 				font-size: 0.75em;
 				display: block;
+				color: black;
+				display: inline-block;
+
+				&.active {
+					color: $success;
+					font-family: "OpenSansBold";
+					display: inline-block;
+				}
 			}
 
 			strong {
@@ -42,6 +79,7 @@ body {
 				font-family: "OpenSansBold";
 				font-size: 0.8em;
 				display: block;
+				font-weight: normal;
 			}
 		}
 	}
