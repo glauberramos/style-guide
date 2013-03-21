@@ -29,6 +29,10 @@ get '/dashboard' do
   slim :dashboard
 end
 
+get '/graphs' do
+  slim :graphs
+end
+
 get '/download/:filename' do |filename|
   send_file "./public/#{filename}", :filename => filename, :type => 'Application/octet-stream'
 end
