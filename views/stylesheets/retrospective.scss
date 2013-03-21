@@ -32,6 +32,10 @@
         .icon {
           display: none;
         }
+
+        .icon-ok {
+          padding: 5px 3px;
+        }
       }
       &.doing {
         background: $link;
