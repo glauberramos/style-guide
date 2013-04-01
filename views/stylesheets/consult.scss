@@ -1,0 +1,109 @@
+@import "colors";
+@import "compass/css3";
+
+body {
+  text-align: left;
+  background: white;
+}
+
+#entry-fields {
+  display: inline-block;
+  width: 58%;
+  vertical-align: top;
+
+  p {
+    padding-bottom: 1em;
+  }
+}
+
+#display-diagnoses {
+  margin: 40px;
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+  font-size: 0.9em;
+
+  h3 {
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 5px;
+  }
+
+  ul {
+    width: 70%;
+  }
+
+  li {
+    margin-bottom: 10px;
+
+    .diagnosis {
+      height: 60px;
+      border-left: 25px solid lighten($text, 10%);
+      border-left: 25px solid rgb(78, 78, 78);
+      display: inline-block;
+      //background: lighten($text, 10%);
+      background: rgb(78, 78, 78);
+      padding: 5px 10px;
+      width: 89.5%;
+      color: white;
+      @include border-radius(5px);
+
+      &.primary {
+        //border-left: 25px solid darken($text, 10%);
+        border-left: 25px solid rgb(49, 179, 26);
+      }
+
+      .actions {
+        margin-left: 150px;
+        margin-top: 20px;
+
+        input {
+          margin: 5px;
+        }
+      }
+    }
+
+    i {
+      display: inline;
+    }
+  }
+}
+
+#buttons {
+  margin-top: 1em;
+}
+
+.matched-name {
+  display: block;
+  font-size: 1em;
+}
+
+.preferred-name {
+  margin-top: 5px;
+  display: block;
+  font-family: "OpenSansLight";
+
+  small {
+    font-size: 1em;
+    color: $darkerGrey;
+  }
+}
+
+.code {
+  float: right;
+  font-family: "OpenSansLight";
+  font-size: 0.9em;
+}
+
+.ui-menu .ui-menu-item {
+  border-bottom: 1px gray solid;
+}
+
+.delete-item {
+  font-family: "FontAwesome";
+  position: relative;
+  display: inline;
+  text-decoration: none;
+  color: #bbbbbb;
+  font-size: 1em;
+  cursor: pointer;
+}
