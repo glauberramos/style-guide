@@ -41,23 +41,64 @@ body {
     margin-bottom: 10px;
 
     .diagnosis {
-      height: 60px;
-      border-left: 25px solid lighten($text, 10%);
-      border-left: 25px solid rgb(78, 78, 78);
+      height: 70px;
       display: inline-block;
-      background: rgb(78, 78, 78);
-      padding: 5px 10px;
-      width: 71.5%;
+      border: 2px solid lighten($text, 10%);
+      background: lighten($text, 10%);
+      width: 77.5%;
       color: white;
       @include border-radius(5px);
 
+      .primary-move, .content {
+        padding: 5px 5px;
+        display: inline-block;
+        height: 60px;
+        vertical-align: top;
+      }
+
+      .primary-move {
+        border-radius: 0 3px 3px 0px;
+        float: right;
+        padding: 5px 0;
+        background: white;
+      }
+
+      .move-down {
+        display: none;
+      }
+
       &.primary {
-        border-left: 25px solid rgb(49, 179, 26);
+        background: rgb(21, 138, 0);
+        border-color: rgb(21, 138, 0);
+
+        .move-up i, .move-down i {
+          color: rgb(21, 138, 0);
+        }
+
+        .move-up {
+          display: none;
+        }
+
+        .move-down {
+          display: inline-block;
+        }
+      }
+
+      .move-up, .move-down {
+        cursor: pointer;
+        margin-top: 17px;
+      }
+
+
+
+      .icon-chevron-up, .icon-chevron-down {
+        color: lighten($text, 10%);
+        font-size: 1.5em;
       }
 
       .actions {
         text-align: right;
-        margin-left: 148px;
+        margin-left: 220px;
         margin-top: 20px;
 
         label {

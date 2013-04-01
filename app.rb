@@ -37,6 +37,10 @@ get '/diagnosis' do
   slim :diagnosis
 end
 
+get '/diagnosis2' do
+  slim :diagnosis2
+end
+
 get '/download/:filename' do |filename|
   send_file "./public/#{filename}", :filename => filename, :type => 'Application/octet-stream'
 end
@@ -68,4 +72,9 @@ end
 get '/consult.css' do
   content_type 'text/css', :charset => 'utf-8'
     scss :'stylesheets/consult'
+end
+
+get '/consult2.css' do
+  content_type 'text/css', :charset => 'utf-8'
+    scss :'stylesheets/consult2'
 end
