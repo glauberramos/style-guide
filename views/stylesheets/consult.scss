@@ -18,18 +18,20 @@ body {
 
 #display-diagnoses {
   margin: 40px;
+  margin-top: 0;
   display: inline-block;
-  width: 40%;
+  width: 45%;
   vertical-align: top;
   font-size: 0.9em;
 
   h3 {
+    margin-top: 40px;
     border-bottom: 1px solid #CCC;
     padding-bottom: 5px;
   }
 
   ul {
-    width: 70%;
+    width: 80%;
   }
 
   li {
@@ -43,7 +45,7 @@ body {
       //background: lighten($text, 10%);
       background: rgb(78, 78, 78);
       padding: 5px 10px;
-      width: 89.5%;
+      width: 80.5%;
       color: white;
       @include border-radius(5px);
 
@@ -53,8 +55,15 @@ body {
       }
 
       .actions {
-        margin-left: 150px;
+        margin-left: 148px;
         margin-top: 20px;
+
+        label {
+          cursor: pointer;
+          user-select: none;
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+        }
 
         input {
           margin: 5px;

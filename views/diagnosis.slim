@@ -7,6 +7,7 @@ html[lang="en"]
     link[rel="stylesheet" href="normalize.css"]
     link[rel="stylesheet" href="screen.css"]
     link[rel="stylesheet" href="consult.css"]
+    link[rel="stylesheet" href="font-awesome.css"]
     script[src="scripts/jquery-1.9.1.js" type="text/javascript"]
     script[src="scripts/diagnosis.js" type="text/javascript"]
 
@@ -20,13 +21,13 @@ html[lang="en"]
               .code
                 | Pa gen Kod
               strong.matched-name
-                | Fever
+                | Malaise at fatigue
               .actions
-                input.primary type="checkbox" checked="checked"
-                label
+                input.primary id="primary1" type="checkbox" checked="checked"
+                label for="primary1"
                   | Primary
-                input type="checkbox"
-                label
+                input id="confirmed1" type="checkbox"
+                label for="confirmed1"
                   | Confirmed
             i.icon-remove.delete-item
         h3 Secondary Diagnosis
@@ -34,28 +35,28 @@ html[lang="en"]
           li
             .diagnosis
               .code
-                | Pa gen Kod
+                | R53
               strong.matched-name
-                | HIV
+                | Maladie pulmanaire obstructive chronique
               .actions
-                input.primary type="checkbox"
-                label
+                input.primary id="primary2" type="checkbox"
+                label for="primary2"
                   | Primary
-                input type="checkbox"
-                label
+                input id="confirmed2" type="checkbox"
+                label for="confirmed2"
                   | Confirmed
             i.icon-remove.delete-item
           li
             .diagnosis
               .code
-                | Pa gen Kod
+                | L11
               strong.matched-name
-                | Malaria
+                | Maladie hypertensive du coeur
               .actions
-                input.primary type="checkbox"
-                label
+                input.primary id="primary3" type="checkbox"
+                label for="primary3"
                   | Primary
-                input type="checkbox"
-                label
+                input id="confirmed3" type="checkbox"
+                label for="confirmed3"
                   | Confirmed
             i.icon-remove.delete-item
